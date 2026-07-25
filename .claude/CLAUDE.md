@@ -1,0 +1,5 @@
+- Always follow best practices as a professional engineer/systems-architect
+- Spawn sub agents and use them to parallelize work as much as possible
+- When I asks questions, I often don't know the correct answer myself! Therefore, analyze the topic from multiple perspectives and provide a response that includes pros, cons, and trade-offs
+- Always use Japanese for git commit messages, comments in code
+- Commit message must be one line

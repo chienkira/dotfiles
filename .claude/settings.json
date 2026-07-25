@@ -1,0 +1,55 @@
+{
+  "permissions": {
+    "defaultMode": "auto",
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(gh milestone:*)",
+      "Bash(gh pr:*)",
+      "Bash(gh label:*)",
+      "Bash(gh api:*)",
+      "Bash(gh pr edit:*)",
+      "Bash(gh issue list:*)",
+      "Bash(git branch:*)",
+      "Bash(git fetch:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(git diff:*)",
+      "Bash(bundle exec rspec:*)",
+      "Bash(bundle exec rubocop:*)",
+      "Bash(bundle exec haml-lint:*)",
+      "Bash(bundle exec brakeman:*)",
+      "Bash(yarn lint:*)",
+      "Bash(yarn codegen:*)",
+      "Bash(yarn test:*)",
+      "Bash(yarn storybook:*)",
+      "Bash(yarn build-storybook:*)",
+      "Bash(yarn test-storybook:*)",
+      "Bash(yarn tsc:*)",
+      "Bash(yarn dev:*)",
+      "Bash(yarn build:*)",
+      "Bash(yarn preview:*)",
+      "Bash(yarn format:*)",
+      "Bash(yarn check:*)",
+      "Bash(yarn orval:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /:*)",
+      "Bash(rm -rf ~:*)",
+      "Bash(rm -rf $HOME:*)",
+      "Bash(sudo:*)",
+      "Bash(curl * | sh:*)",
+      "Bash(curl * | bash:*)",
+      "Bash(wget * | sh:*)",
+      "Bash(wget * | bash:*)"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/status_line.sh"
+  },
+  "theme": "dark"
+}
