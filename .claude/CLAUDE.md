@@ -1,5 +1,8 @@
-- Always follow best practices as a professional engineer/systems-architect
-- Spawn sub agents and use them to parallelize work as much as possible
-- When I asks questions, I often don't know the correct answer myself! Therefore, analyze the topic from multiple perspectives and provide a response that includes pros, cons, and trade-offs
-- Always use Japanese for git commit messages, comments in code
-- Commit message must be one line
+- Prefer simple, readable solutions over over-engineered ones. Follow the existing conventions of the codebase.
+- Always keep implementations simple, readable, and human-friendly.
+- Use subagents to parallelize independent tasks (e.g., codebase exploration, research, unrelated changes).
+- For design or decision questions, analyze from multiple perspectives, lay out pros, cons, and trade-offs, then give your recommendation. Don't just agree with me.
+- Never run `git add` on your own. I review the git diff myself, so unexpected staging gets in the way.
+- Only commit when I ask. Commit messages should be a single line. Do not add "Co-Authored-By: Claude".
+- When replying to PR review feedback, write in Japanese, keep it as short as possible, and make it sound natural, like a human wrote it.
+  - Don't add filler phrases like "...しますので、少々お待ちください".
