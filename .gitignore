@@ -1,4 +1,4 @@
-# 個人メモ
+# Memo
 memo.md
 
 # macOS
@@ -13,4 +13,4 @@ Icon
 # Editor / IDE
 *.swp
 *.swo
-
+.vscode/tasks.json
