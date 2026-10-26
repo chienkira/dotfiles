@@ -23,19 +23,19 @@ function prompt-git-branch {
 }
 # " ◷ 1m 5s" for the last command. Empty if it took < 1s or no command was run.
 function format-duration {
-  local total_seconds=$1
-  local minutes=$(( total_seconds / 60 ))
-  local seconds=$(( total_seconds % 60 ))
+  local -i total_tenths=$(( $1 * 10 + 0.5 ))  # round to 0.1s, e.g. 62.06 -> 621
+  local -i minutes=$(( total_tenths / 600 ))
+  local -i seconds=$(( total_tenths % 600 / 10 ))
+  local -i tenths=$(( total_tenths % 10 ))
   if (( minutes > 0 )); then
-    echo "${minutes}m ${seconds}s"
+    echo "${minutes}m ${seconds}.${tenths}s"
   else
-    echo "${seconds}s"
+    echo "${seconds}.${tenths}s"
   fi
 }
 function prompt-command-duration {
   [[ -z $PROMPT_COMMAND_START_TIME ]] && return
-  local -i elapsed=$(( EPOCHREALTIME - PROMPT_COMMAND_START_TIME ))  # -i truncates to whole seconds
-  (( elapsed < 1 )) && return
+  local -F elapsed=$(( EPOCHREALTIME - PROMPT_COMMAND_START_TIME ))
   echo " %F{yellow}◷ $(format-duration $elapsed)%f"
 }
 function build-prompt {
